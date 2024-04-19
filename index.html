@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final RPS project</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+   <div class="container">
+     <p class="title">Rock Paper Scissors</p>
+
+   
+     <div class="icons">
+          <button class="icon" onclick="
+          game('rock');
+          "><span class="rock-icon">✊</span></button>
+
+          <button  class="icon" onclick="
+               game('paper');
+          "> <span class="paper-icon">✋</span> </button>
+
+          <button  class="icon" onclick="
+               game('scissors');
+          "><span class="scissors-icon">✌️</span>  </button>
+
+     </div>
+     
+     <p class="js-moves moves"> Your Move:-  , Computer Move:- </p>
+     <p class="js-result result"></p>
+     <p class="js-score score"></p>
+     
+     <button onclick="
+               score.Wins = 0;
+               score.Ties = 0;
+               score.Losses = 0;
+               localStorage.removeItem('score');
+               document.querySelector('.js-moves').innerHTML = 'Your Move:-   , Computer Move:-'
+               updateScoreElement();
+               document.querySelector('.js-result').innerHTML = 'Result:'
+     " class="reset-score-button">🔄Reset</button>
+   </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
